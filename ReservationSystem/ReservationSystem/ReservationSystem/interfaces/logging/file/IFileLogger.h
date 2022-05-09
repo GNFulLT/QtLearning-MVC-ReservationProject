@@ -4,7 +4,7 @@
 #include "../ILogger.h"
 namespace Logger{
 enum FileLoggerTypes{
-    JsonLogger = 1, //01
+    JsonLoggerr = 1, //01
     XamlLogger = 2, //10
     HtmlLogger = 4 //100
 };

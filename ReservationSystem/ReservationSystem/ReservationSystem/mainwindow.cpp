@@ -7,6 +7,7 @@
 #include "services/subservices/hotelreservation.h"
 #include "services/subservices/hotelreservationinfo.h"
 
+#include "services/fileloggerfactory.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -35,7 +36,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    Flight::FlightReservationInfo* info1 = new Flight::FlightReservationInfo();
+    Flight::FlightReservationInfo* info1 = new Flight::FlightReservationInfo(new Factory::FileLoggerFactory(Logger::JsonLoggerr));
     info1->SetName(new QString("Ahmet"));
     info1->SetSurname(new QString("Kuş"));
     info1->SetTC(new QString("2139219321"));
@@ -43,7 +44,7 @@ void MainWindow::on_pushButton_clicked()
     info1->SetComingDate(new QDate(QDate::currentDate()));
     info1->SetLeavingDate(new QDate(QDate::currentDate()));
 
-    Hotel::HotelReservationInfo* info2 = new Hotel::HotelReservationInfo();
+    Hotel::HotelReservationInfo* info2 = new Hotel::HotelReservationInfo(new Factory::FileLoggerFactory(Logger::JsonLoggerr));
 
     info2->SetName(new QString("Ahmet"));
     info2->SetSurname(new QString("Kuş"));

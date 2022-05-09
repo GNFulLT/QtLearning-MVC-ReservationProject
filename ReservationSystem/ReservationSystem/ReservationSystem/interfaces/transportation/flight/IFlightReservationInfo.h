@@ -7,16 +7,16 @@
 namespace Flight{
 class IFlightReservationInfo : public Transportation::ITransportationReservationInfo{
 public:
-
+    virtual void LogMembers(){
+        Transportation::ITransportationReservationInfo::LogMembers();
+    }
 protected:
     IFlightReservationInfo(Factory::ILoggerFactory* factory = 0) : Transportation::ITransportationReservationInfo(factory){}
     virtual QJsonObject* GetJsonObject(){
         QJsonObject* jsonObject = Transportation::ITransportationReservationInfo::GetJsonObject();
         return jsonObject;
     };
-    virtual void LogMembers(){
-        Transportation::ITransportationReservationInfo::LogMembers();
-    }
+
 };
 }
 

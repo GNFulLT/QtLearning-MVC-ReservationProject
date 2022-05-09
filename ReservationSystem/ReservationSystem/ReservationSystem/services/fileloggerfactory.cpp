@@ -1,11 +1,11 @@
 #include "fileloggerfactory.h"
-
+#include "../services/subservices/jsonlogger.h"
 namespace Factory {
 
 FileLoggerFactory::FileLoggerFactory(Logger::FileLoggerTypes types)
 {
-    if((types & Logger::JsonLogger) == Logger::JsonLogger){
-
+    if((types & Logger::JsonLoggerr) == Logger::JsonLoggerr){
+     _jsonLogger.reset(new Logger::JsonLogger(QString(".\\logs\\")));
     }
     if((types & Logger::HtmlLogger) == Logger::HtmlLogger){
 

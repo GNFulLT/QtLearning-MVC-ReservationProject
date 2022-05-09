@@ -10,6 +10,7 @@ FlightReservation::FlightReservation(IFlightReservationInfo* info)
 
 void FlightReservation::MakeReservation(){
     QJsonDocument* jsonDoc = _info.get()->GetJsonDocument();
+    _info.get()->LogMembers();
     delete jsonDoc;
 }
 

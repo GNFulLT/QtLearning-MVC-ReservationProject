@@ -11,9 +11,9 @@ namespace Flight {
 class FlightReservationInfo : public IFlightReservationInfo
 {
 public:
-    FlightReservationInfo(Factory::ILoggerFactory* factory);
+    FlightReservationInfo(Factory::ILoggerFactory* factory = 0);
     QJsonDocument* GetJsonDocument() override;
-
+    virtual void LogMembers() override;
 
 };
 

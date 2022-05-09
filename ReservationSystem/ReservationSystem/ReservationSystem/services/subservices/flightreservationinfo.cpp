@@ -17,7 +17,9 @@ QJsonDocument* FlightReservationInfo::GetJsonDocument(){
 
     return doc;
 }
-
+void FlightReservationInfo::LogMembers(){
+   IFlightReservationInfo::LogMembers();
+}
 
 
 } // namespace Flight

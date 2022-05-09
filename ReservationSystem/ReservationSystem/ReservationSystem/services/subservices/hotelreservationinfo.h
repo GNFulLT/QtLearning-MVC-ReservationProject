@@ -8,7 +8,7 @@ namespace Hotel {
 class HotelReservationInfo : public IHotelReservationInfo
 {
 public:
-    HotelReservationInfo();
+    HotelReservationInfo(Factory::ILoggerFactory* factory = 0);
     QJsonDocument* GetJsonDocument() override;
 
 };

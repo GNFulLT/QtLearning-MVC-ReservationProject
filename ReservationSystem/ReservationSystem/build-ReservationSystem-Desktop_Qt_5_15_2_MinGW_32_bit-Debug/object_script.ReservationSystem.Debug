@@ -2,10 +2,12 @@ debug/mainwindowcontroller.o
 debug/factoryfacade.o
 debug/main.o
 debug/mainwindow.o
+debug/fileloggerfactory.o
 debug/flightreservation.o
 debug/flightreservationinfo.o
 debug/hotelreservation.o
 debug/hotelreservationinfo.o
+debug/jsonlogger.o
 debug/tlfactory.o
 debug/moc_mainwindowcontroller.o
 debug/moc_mainwindow.o

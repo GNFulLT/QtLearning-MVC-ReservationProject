@@ -2,7 +2,7 @@
 
 namespace Hotel {
 
-HotelReservationInfo::HotelReservationInfo()
+HotelReservationInfo::HotelReservationInfo(Factory::ILoggerFactory* factory) : IHotelReservationInfo(factory)
 {
 
 }

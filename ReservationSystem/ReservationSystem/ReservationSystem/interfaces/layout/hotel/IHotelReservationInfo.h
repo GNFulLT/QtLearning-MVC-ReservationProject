@@ -7,6 +7,7 @@ class IHotelReservationInfo : public Layout::ILayoutReservationInfo{
 public:
 
 protected:
+    IHotelReservationInfo(Factory::ILoggerFactory* factory) : Layout::ILayoutReservationInfo(factory){}
     IHotelReservationInfo()  = default;
     virtual QJsonObject* GetJsonObject(){
         QJsonObject* jsonObject = Layout::ILayoutReservationInfo::GetJsonObject();

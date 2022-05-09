@@ -6,7 +6,7 @@
 #include <QString>
 namespace Factory{
 
-class IFileLoggerFactory : ILoggerFactory{
+class IFileLoggerFactory : public ILoggerFactory{
 public:
     virtual void ConstructLoggers(QString s) = 0;
     virtual void ConstructLoggers(QString key,QString value) = 0;
