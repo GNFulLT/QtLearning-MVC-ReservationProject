@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui \
+            xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,6 +20,7 @@ SOURCES += \
     services/subservices/hotelreservation.cpp \
     services/subservices/hotelreservationinfo.cpp \
     services/subservices/jsonlogger.cpp \
+    services/subservices/xmllogger.cpp \
     services/tlfactory.cpp
 
 HEADERS += \
@@ -37,6 +39,7 @@ HEADERS += \
     interfaces/logging/file/IFileLogger.h \
     interfaces/logging/file/IFileLoggerFactory.h \
     interfaces/logging/file/json/IJsonLogger.h \
+    interfaces/logging/file/xml/IXmlLogger.h \
     interfaces/transportation/ITransportationReservation.h \
     interfaces/transportation/ITransportationReservationInfo.h \
     interfaces/transportation/flight/IFlightReservation.h \
@@ -48,6 +51,7 @@ HEADERS += \
     services/subservices/hotelreservation.h \
     services/subservices/hotelreservationinfo.h \
     services/subservices/jsonlogger.h \
+    services/subservices/xmllogger.h \
     services/tlfactory.h
 
 FORMS += \

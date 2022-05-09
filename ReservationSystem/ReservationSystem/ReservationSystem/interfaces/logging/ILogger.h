@@ -9,7 +9,6 @@ class ILogger{
 public:
     virtual void Log(QString s) = 0;
     virtual void Log(QString key,QString value) = 0;
-
 };
 }
 

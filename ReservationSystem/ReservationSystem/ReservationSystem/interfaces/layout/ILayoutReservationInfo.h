@@ -8,7 +8,7 @@ class ILayoutReservationInfo : public Reservation::IReservationInfo{
 public:
 
 protected:
-    ILayoutReservationInfo(Factory::ILoggerFactory* factory) : Reservation::IReservationInfo(factory){}
+    ILayoutReservationInfo(Factory::ILoggerFactory* factory = 0,const QString& fileName = 0) : Reservation::IReservationInfo(factory,fileName){}
     virtual QJsonObject* GetJsonObject(){
         QJsonObject* jsonObject = Reservation::IReservationInfo::GetJsonObject();
         return jsonObject;

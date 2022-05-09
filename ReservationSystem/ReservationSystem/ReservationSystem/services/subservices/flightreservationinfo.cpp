@@ -2,7 +2,7 @@
 
 namespace Flight {
 
-FlightReservationInfo::FlightReservationInfo(Factory::ILoggerFactory* factory) : IFlightReservationInfo(factory)
+FlightReservationInfo::FlightReservationInfo(Factory::ILoggerFactory* factory,const QString& fileName) : IFlightReservationInfo(factory,fileName)
 {
 
 }

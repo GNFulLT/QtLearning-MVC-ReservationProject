@@ -2,7 +2,7 @@
 
 namespace Hotel {
 
-HotelReservationInfo::HotelReservationInfo(Factory::ILoggerFactory* factory) : IHotelReservationInfo(factory)
+HotelReservationInfo::HotelReservationInfo(Factory::ILoggerFactory* factory,const QString& fileName) : IHotelReservationInfo(factory,fileName)
 {
 
 }
@@ -16,4 +16,8 @@ QJsonDocument* HotelReservationInfo::GetJsonDocument(){
 
     return doc;
 }
+void HotelReservationInfo::LogMembers(){
+   IHotelReservationInfo::LogMembers();
+}
+
 } // namespace Hotel

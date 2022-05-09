@@ -10,13 +10,14 @@ namespace Logger{
 class JsonLogger : public IJsonLogger
 {
 public:
-    JsonLogger(const QString& path = 0);
+    JsonLogger(const QString& path);
     void Log(QString s) override;
     void Log(QString key,QString value) override;
+
 private:
     std::unique_ptr<QString> _path;
-    std::unique_ptr<QJsonObject> _jsonObject;
     std::unique_ptr<QJsonArray> _jsonArray;
+
 
 };
 }

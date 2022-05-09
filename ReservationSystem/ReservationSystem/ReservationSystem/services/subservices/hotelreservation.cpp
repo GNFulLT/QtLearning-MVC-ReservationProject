@@ -9,7 +9,7 @@ HotelReservation::HotelReservation(IHotelReservationInfo* info)
 
 void HotelReservation::MakeReservation(){
     QJsonDocument* jsonDoc = _info.get()->GetJsonDocument();
-
+    _info.get()->LogMembers();
     delete jsonDoc;
 }
 

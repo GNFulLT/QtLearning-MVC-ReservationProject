@@ -8,7 +8,6 @@ namespace Logger{
 JsonLogger::JsonLogger(const QString& path)
 {
     _path = std::make_unique<QString>(path);
-   _jsonObject.reset(new QJsonObject());
    _jsonArray.reset(new QJsonArray());
 }
 void JsonLogger::Log(QString s){
@@ -16,7 +15,6 @@ void JsonLogger::Log(QString s){
 }
 
 inline void JsonLogger::Log(QString key,QString value){
-    (*(_jsonObject.get()))[key] = value;
     QJsonObject object;
     object[key] = value;
    (*(_jsonArray.get())).append(object);
@@ -34,7 +32,7 @@ inline void JsonLogger::Log(QString key,QString value){
     if(dirPath[dirPath.length()-1] != '\\'){
         dirPath.append('\\');
     }
-    QString filePath = dirPath + "jsonlog.json";
+    QString filePath = dirPath +*(_fileName.get()) + "log.json";
     QFile file = QFile(filePath);
 
     file.open(QIODevice::Truncate | QIODevice::WriteOnly);

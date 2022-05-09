@@ -29,7 +29,7 @@ public:
 protected:
     void Log(QString s) override {_logger.get()->ConstructLoggers(s);};
     void Log(QString key,QString value) override { _logger.get()->ConstructLoggers(key,value);};
-    IReservationInfo(Factory::ILoggerFactory* factory = 0) : Logger::ILoggable(factory){}
+    IReservationInfo(Factory::ILoggerFactory* factory = 0,const QString& fileName = 0) : Logger::ILoggable(factory,fileName){}
     virtual QJsonObject* GetJsonObject(){
         QJsonObject* jsonObject = new QJsonObject;
         (*jsonObject)["Name"] = *(_name.get());
@@ -43,6 +43,7 @@ protected:
     }
 
     virtual void LogMembers(){
+        SetFileName();
         Log("Name",*(_name.get()));
         Log("Surname",*(_surname.get()));
         Log("TC",*(_tc.get()));

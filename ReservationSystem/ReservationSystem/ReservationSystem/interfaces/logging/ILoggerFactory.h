@@ -8,7 +8,7 @@ class ILoggerFactory{
 public:
     virtual void ConstructLoggers(QString s) = 0;
     virtual void ConstructLoggers(QString key,QString value) = 0;
-
+    virtual void SetFileName(const QString& value) = 0;
 };
 }
 

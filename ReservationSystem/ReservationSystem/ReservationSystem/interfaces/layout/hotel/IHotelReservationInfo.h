@@ -5,17 +5,17 @@
 namespace Hotel{
 class IHotelReservationInfo : public Layout::ILayoutReservationInfo{
 public:
-
+    virtual void LogMembers(){
+        Layout::ILayoutReservationInfo::LogMembers();
+    }
 protected:
-    IHotelReservationInfo(Factory::ILoggerFactory* factory) : Layout::ILayoutReservationInfo(factory){}
+    IHotelReservationInfo(Factory::ILoggerFactory* factory = 0,const QString& fileName = 0) : Layout::ILayoutReservationInfo(factory,fileName){}
     IHotelReservationInfo()  = default;
     virtual QJsonObject* GetJsonObject(){
         QJsonObject* jsonObject = Layout::ILayoutReservationInfo::GetJsonObject();
         return jsonObject;
     };
-    virtual void LogMembers(){
-        Layout::ILayoutReservationInfo::LogMembers();
-    }
+
 };
 }
 
