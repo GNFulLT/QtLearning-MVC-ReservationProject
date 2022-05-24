@@ -14,18 +14,289 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>420</y>
-      <width>241</width>
-      <height>111</height>
+      <x>10</x>
+      <y>0</y>
+      <width>1171</width>
+      <height>601</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
+    <widget class="QWidget" name="page">
+     <widget class="QComboBox" name="transportationReservationsComboBox">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>90</y>
+        <width>551</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="layoutReservationsComboBox">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>291</y>
+        <width>551</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="confirmButton1">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>410</y>
+        <width>231</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Confirm</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QTextEdit" name="kimlikTextBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>60</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kimlikNoLabel">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>TC Kimlik</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="isimTextBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>130</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="isimLabel">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>İsim</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="soyisimTextBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>200</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="soyisimLabel">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>200</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Soyisim</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="telefonNoTextBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>280</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="isimLabel_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>280</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Telefon No:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="isimLabel_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>360</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Koltuk No</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="koltukNoComboBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gidisTarihi">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>60</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Gidiş Tarihi</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="donusTarihi">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>130</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Dönüş Tarihi</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="jsonCheckBox">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>360</y>
+        <width>76</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Json</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="xmlCheckBox">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>360</y>
+        <width>76</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>XML</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="htmlCheckBox">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>360</y>
+        <width>76</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>HTML</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="gidisTarihiText">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>60</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="donusTarihiText">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>130</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>450</y>
+        <width>201</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kaydı Bitir ve Çıktı Al</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

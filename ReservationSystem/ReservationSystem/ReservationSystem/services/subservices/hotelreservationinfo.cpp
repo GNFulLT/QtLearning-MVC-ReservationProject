@@ -2,7 +2,7 @@
 
 namespace Hotel {
 
-HotelReservationInfo::HotelReservationInfo(Factory::ILoggerFactory* factory,const QString& fileName) : IHotelReservationInfo(factory,fileName)
+HotelReservationInfo::HotelReservationInfo(Factory::ILoggerFactory* factory,const QString& fileName) noexcept : IHotelReservationInfo(factory,fileName)
 {
 
 }

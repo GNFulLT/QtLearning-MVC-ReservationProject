@@ -5,6 +5,7 @@
 #include "../interfaces/transportation/ITransportationReservation.h"
 #include "../interfaces/layout/ILayoutReservation.h"
 #include "../facades/factoryfacade.h"
+#include "qcombobox.h"
 
 namespace Controller {
 

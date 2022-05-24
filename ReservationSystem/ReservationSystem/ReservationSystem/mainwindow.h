@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QComboBox>
 #include <QMainWindow>
 #include "controllers/mainwindowcontroller.h"
 QT_BEGIN_NAMESPACE
@@ -23,8 +24,8 @@ private:
     Controller::MainWindowController* _controller;
 signals:
     void wants_tl_create_reservation(Transportation::ITransportationReservation*,Layout::ILayoutReservation*);
-
 private slots:
     void on_pushButton_clicked();
+    void on_confirmButton1_clicked();
 };
 #endif // MAINWINDOW_H
