@@ -1,25 +1,22 @@
-#include "jsonlogger.h"
-#include <QJsonDocument>
-#include <QFile>
+#include "htmllogger.h"
+
 #include <QDir>
-#include <QDataStream>
-#include <QJsonArray>
-namespace Logger{
-JsonLogger::JsonLogger(const QString& path)
+
+namespace Logger {
+
+HtmlLogger::HtmlLogger(const QString& path)
 {
     _path = std::make_unique<QString>(path);
-   _jsonArray.reset(new QJsonArray());
+    _htmlString.reset(new QString());
 }
-void JsonLogger::Log(QString s){
+void HtmlLogger::Log(QString s){
     throw std::invalid_argument("Cannot create log direction folder");
 }
 
-void JsonLogger::Log(QString key,QString value){
-    QJsonObject object;
-    object[key] = value;
-   (*(_jsonArray.get())).append(object);
-    QJsonDocument doc = QJsonDocument(*(_jsonArray.get()));
-    QByteArray array = doc.toJson();
+void HtmlLogger::Log(QString key,QString value){
+    (*_htmlString) += "<h2>"+key+"</h2>\n" + "<p>"+value+"</p>\n";
+
+    //Opens file
     QDir dir = QDir(*(_path.get()));
      bool isCreated = true;
     if(!dir.exists()){
@@ -32,11 +29,12 @@ void JsonLogger::Log(QString key,QString value){
     if(dirPath[dirPath.length()-1] != '\\'){
         dirPath.append('\\');
     }
-    QString filePath = dirPath +*(_fileName.get()) + "log.json";
+    QString filePath = dirPath +*(_fileName.get()) + "log.html";
     QFile file = QFile(filePath);
 
     file.open(QIODevice::Truncate | QIODevice::WriteOnly);
-    file.write(array);
+    file.write(&(*_htmlString->toStdString().c_str()));
     file.close();
 }
-}
+
+} // namespace Logger

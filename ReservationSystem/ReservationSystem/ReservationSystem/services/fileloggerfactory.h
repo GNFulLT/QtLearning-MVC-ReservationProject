@@ -8,6 +8,8 @@
 
 #include <bits/unique_ptr.h>
 
+#include <interfaces/logging/file/html/IHtmlLogger.h>
+
 namespace Factory {
 
 class FileLoggerFactory : public IFileLoggerFactory
@@ -21,6 +23,8 @@ public:
 private:
     std::unique_ptr<Logger::IJsonLogger> _jsonLogger;
     std::unique_ptr<Logger::IXmlLogger> _xmlLogger;
+    std::unique_ptr<Logger::IHtmlLogger> _htmlLogger;
+
 };
 
 } // namespace Factory

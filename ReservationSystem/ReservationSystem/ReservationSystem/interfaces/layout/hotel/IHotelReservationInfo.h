@@ -10,7 +10,6 @@ public:
     }
 protected:
     IHotelReservationInfo(Factory::ILoggerFactory* factory = 0,const QString& fileName = 0) : Layout::ILayoutReservationInfo(factory,fileName){}
-    IHotelReservationInfo()  = default;
     virtual QJsonObject* GetJsonObject(){
         QJsonObject* jsonObject = Layout::ILayoutReservationInfo::GetJsonObject();
         return jsonObject;
