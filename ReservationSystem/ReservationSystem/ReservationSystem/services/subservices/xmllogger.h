@@ -11,7 +11,7 @@ namespace Logger {
 class XmlLogger : public IXmlLogger
 {
 public:
-    XmlLogger(const QString& path = 0);
+    XmlLogger(const QString& path);
     void Log(QString s) override;
     void Log(QString key,QString value) override;
 
