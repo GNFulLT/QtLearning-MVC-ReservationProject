@@ -23,6 +23,31 @@
       <height>601</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+border:1px solid black;
+padding:2px;
+border-radius:2px;
+}
+QTextEdit{
+border:1px solid rgba(0,0,0,0.25);
+border-radius:4px;
+}
+QDateEdit{
+border:1px solid rgba(0,0,0,0.25);
+border-radius:4px;
+}
+QStackedWidget &gt; QWidget{
+ background-color: qradialgradient(spread:pad, 
+                            cx:0.739, 
+                            cy:0.278364, 
+                            radius:0.478, 
+                            fx:0.997289, 
+                            fy:0.00389117, 
+                            stop:0 rgba(255, 255, 255, 255), 
+                            stop:1 rgba(75,75 ,75, 255));
+}</string>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -75,9 +100,9 @@
      <widget class="QLabel" name="kimlikNoLabel">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>60</y>
-        <width>71</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -101,9 +126,9 @@
      <widget class="QLabel" name="isimLabel">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>130</y>
-        <width>71</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -127,9 +152,9 @@
      <widget class="QLabel" name="soyisimLabel">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>200</y>
-        <width>71</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -153,9 +178,9 @@
      <widget class="QLabel" name="isimLabel_3">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>280</y>
-        <width>71</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -169,9 +194,9 @@
      <widget class="QLabel" name="isimLabel_4">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>360</y>
-        <width>71</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -195,14 +220,17 @@
      <widget class="QLabel" name="gidisTarihi">
       <property name="geometry">
        <rect>
-        <x>650</x>
+        <x>620</x>
         <y>60</y>
-        <width>71</width>
+        <width>101</width>
         <height>31</height>
        </rect>
       </property>
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Gidiş Tarihi</string>
@@ -211,9 +239,9 @@
      <widget class="QLabel" name="donusTarihi">
       <property name="geometry">
        <rect>
-        <x>650</x>
+        <x>620</x>
         <y>130</y>
-        <width>71</width>
+        <width>101</width>
         <height>31</height>
        </rect>
       </property>
@@ -305,7 +333,7 @@
      <x>0</x>
      <y>0</y>
      <width>1184</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

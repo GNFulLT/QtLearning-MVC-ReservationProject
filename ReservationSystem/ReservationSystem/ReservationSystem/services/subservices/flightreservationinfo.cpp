@@ -21,5 +21,4 @@ void FlightReservationInfo::LogMembers(){
    IFlightReservationInfo::LogMembers();
 }
 
-
 } // namespace Flight
