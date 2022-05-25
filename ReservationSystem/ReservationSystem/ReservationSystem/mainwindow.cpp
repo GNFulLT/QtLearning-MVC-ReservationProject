@@ -43,6 +43,10 @@ MainWindow::MainWindow(QWidget *parent)
        ui->koltukNoComboBox->addItem(QString::number(i));
    }
 
+   ui->donusTarihiText->setDate(QDate::currentDate());
+   ui->gidisTarihiText->setDate(QDate::currentDate());
+
+
 }
 
 void MainWindow::InitializeComponents(){
